@@ -17,7 +17,6 @@ protocol UserProviderProtocol {
 
 class UserProvider: UserProviderProtocol {
     lazy var  auth = Auth.auth()
-    
     func login(parameters: [AnyHashable : Any], completionHandler: @escaping (Result<UserModel, Error>) -> Void) {
         let body : NSDictionary = parameters[ Constants.ParametersKeys.body] as! NSDictionary
         let userModel = body[Constants.ParametersKeys.userModel] as! UserModel
@@ -43,6 +42,5 @@ class UserProvider: UserProviderProtocol {
             }
         }
     }
-    
 }
 

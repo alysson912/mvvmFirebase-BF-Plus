@@ -12,7 +12,7 @@ struct UserModel: Codable { // protocolo utilizado para codificar e decodificar 
     let password : String
     
     init(){
-        self.email = String() // estamos dizendo que email está vazia, para nao se preocupar se esta nulo ou n 
+        self.email = String() // estamos dizendo que email está vazia, para nao se preocupar se esta nulo ou n
         self.password = String()
     }
     init(email: String, password: String){

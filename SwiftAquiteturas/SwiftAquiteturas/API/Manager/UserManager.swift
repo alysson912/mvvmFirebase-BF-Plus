@@ -7,20 +7,17 @@
 
 import Foundation
 
-
 protocol UserManagerProtocol {
     func register ( email: String, password : String,
                     succesHandler: @escaping(UserModel) -> Void,
                     failureHandler: @escaping(Error) -> Void)
     
     func login(email: String, password : String,
-                successHandler : @escaping(UserModel) -> Void,
-                failureHandler: @escaping(Error) -> Void)
+               successHandler : @escaping(UserModel) -> Void,
+               failureHandler: @escaping(Error) -> Void)
 }
 
 class UserManager : UserManagerProtocol {
-  
-    
     let business : UserBusinessProtocol
     
     init(business : UserBusinessProtocol){
@@ -41,6 +38,7 @@ class UserManager : UserManagerProtocol {
             }
         }
     }
+    
     func register(email: String, password: String,
                   succesHandler: @escaping (UserModel) -> Void,
                   failureHandler: @escaping (Error) -> Void) {
@@ -54,5 +52,4 @@ class UserManager : UserManagerProtocol {
             }
         }
     }
-    
 }

@@ -13,11 +13,8 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var entrarButton: UIButton!
-    
     @IBOutlet weak var registerButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,7 +25,6 @@ class LoginViewController : UIViewController {
         
         if let email = emailTextField.text,
            let password = passwordTextField.text{
-            
             manager.login(email: email, password: password){
                 userModel in
                 self.openHomeView()
@@ -37,28 +33,29 @@ class LoginViewController : UIViewController {
             }
         }
     }
-        func showMessage(title : String, message : String){
-            let alert = UIAlertController(
-                title: title,
-                message : message,
-                preferredStyle: .alert)
-            alert.addAction(UIAlertAction( title: "OK", style: UIAlertAction.Style.default, handler : nil))
-            
-            self.present( alert, animated:  true )
-        }
-    
-    
-    @IBAction func tappedRegisterButton(_ sender: Any) {
+    func showMessage(title : String, message : String){
+        let alert = UIAlertController(
+            title: title,
+            message : message,
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction( title: "OK", style: UIAlertAction.Style.default, handler : nil))
+        self.present( alert, animated:  true )
     }
-
+    
+    @IBAction func tappedRegister(_ sender: UIButton) {
+        let registerView = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+        
+        registerView?.modalPresentationStyle = .fullScreen
+        self.present(registerView ?? UIViewController(), animated: true)
+    }
+    
     func openHomeView(){
         let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        self.present( homeView, animated:  true)
         homeView.modalPresentationStyle = .fullScreen
+        self.present( homeView, animated:  true)
     }
-    
-    }
-    
-    
-    
+}
+
+
+
 
