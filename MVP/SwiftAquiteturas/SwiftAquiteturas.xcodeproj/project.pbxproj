@@ -11,6 +11,7 @@
 		3872EF212931399B00F30B98 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3872EF202931399B00F30B98 /* RegisterViewController.swift */; };
 		3872EF2329313CCF00F30B98 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3872EF2229313CCF00F30B98 /* HomeViewController.swift */; };
 		3872EF2529313CED00F30B98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3872EF2429313CED00F30B98 /* LoginViewController.swift */; };
+		3872EF292932904500F30B98 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3872EF282932904500F30B98 /* LoginPresenter.swift */; };
 		38CA276C292D49FE00227F15 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA276B292D49FE00227F15 /* UserManager.swift */; };
 		762B63FF291829F400D6F769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B63FE291829F400D6F769 /* AppDelegate.swift */; };
 		762B6401291829F400D6F769 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B6400291829F400D6F769 /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 		3872EF202931399B00F30B98 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3872EF2229313CCF00F30B98 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3872EF2429313CED00F30B98 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3872EF282932904500F30B98 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		38CA276B292D49FE00227F15 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		762B63FB291829F400D6F769 /* SwiftAquiteturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAquiteturas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		762B63FE291829F400D6F769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +72,25 @@
 			isa = PBXGroup;
 			children = (
 				3872EF2429313CED00F30B98 /* LoginViewController.swift */,
+				3872EF282932904500F30B98 /* LoginPresenter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3872EF2729328EF900F30B98 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3872EF202931399B00F30B98 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3872EF2A2932905900F30B98 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3872EF2229313CCF00F30B98 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		38CA276A292D49F200227F15 /* Manager */ = {
@@ -152,8 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				3872EF2629328B5700F30B98 /* Login */,
-				3872EF2229313CCF00F30B98 /* HomeViewController.swift */,
-				3872EF202931399B00F30B98 /* RegisterViewController.swift */,
+				3872EF2729328EF900F30B98 /* Register */,
+				3872EF2A2932905900F30B98 /* Home */,
 				762B63FE291829F400D6F769 /* AppDelegate.swift */,
 				762B6400291829F400D6F769 /* SceneDelegate.swift */,
 				762B6404291829F400D6F769 /* Main.storyboard */,
@@ -299,6 +318,7 @@
 				762B63FF291829F400D6F769 /* AppDelegate.swift in Sources */,
 				762B6401291829F400D6F769 /* SceneDelegate.swift in Sources */,
 				764D78AA292C0B8900343E5C /* UserModel.swift in Sources */,
+				3872EF292932904500F30B98 /* LoginPresenter.swift in Sources */,
 				764D78A7292C0AB300343E5C /* UserProvider.swift in Sources */,
 				3872EF2329313CCF00F30B98 /* HomeViewController.swift in Sources */,
 				764D78AD292C0F7B00343E5C /* Constants.swift in Sources */,

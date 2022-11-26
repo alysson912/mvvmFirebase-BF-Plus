@@ -42,6 +42,7 @@ extension RegisterViewController : UITextFieldDelegate {
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn")
+        textField.resignFirstResponder()
         return true  
     }
 }
